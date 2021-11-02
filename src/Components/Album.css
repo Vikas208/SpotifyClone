@@ -1,0 +1,28 @@
+.album {
+  display: flex;
+  width: 150px;
+  min-height: 200px;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px 0 #121212, 0 6px 20px 0 #121212;
+  cursor: pointer;
+  transition: 300ms background ease-in;
+  border-radius: 5px;
+}
+.album > img {
+  width: 150px;
+  height: 160px;
+  align-self: center;
+  border-radius: 8px;
+}
+.album > p {
+  font-size: 14px;
+  margin-bottom: 1px;
+  line-height: 0.8;
+}
+
+.album:hover {
+  background-color: #363333;
+}
