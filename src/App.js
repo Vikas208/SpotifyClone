@@ -28,28 +28,23 @@ function App() {
           user: user,
         });
       });
-      spotify.getUserPlaylists().then((playlists) => {
-        dispatch({
-          type: "SET_PLAYLISTS",
-          playlists: playlists,
-        });
-      });
-      spotify.getRecommendations().then((recommendations) => {
-        dispatch({
-          type: "SET_RECOMMENDETIONS",
-          recommendations: recommendations,
-        });
-      });
       spotify.getMyRecentlyPlayedTracks().then((recentlyPlayed) => {
         dispatch({
           type: "SET_RECENTLYPLAYEDTRACKS",
           recentlyPlayed: recentlyPlayed,
         });
       });
+      spotify.getMyTopTracks().then((tracks) => {
+        tracks = tracks?.items?.filter((element, index) => {
+          return index < 6;
+        });
+        dispatch({
+          type: "SET_TRACKS",
+          tracks: tracks,
+        });
+      });
     }
   }, []);
-  console.log(spotify);
-  console.log(user);
   return (
     <div className="App">
       {token ? <Player spotify={spotify} /> : <Login />}

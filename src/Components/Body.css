@@ -1,45 +1,18 @@
 .body {
   flex: 0.8;
   color: white;
-  background-color: #1a1a1a;
-  max-height: 100vh;
-  padding: 10px 20px;
+  background-color: hsl(0, 0%, 10%);
+  min-height: 100em;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding-bottom: 40px;
   margin-bottom: 40px;
+  width: 100%;
+  position: relative;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-.back {
-  cursor: pointer;
-  border-radius: 999px;
-  padding: 10px;
-}
-.back:hover {
-  background-color: #494949;
-}
-.account {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  background-color: #121212;
-  padding: 0px 20px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 12px;
-}
-.person {
-  border: 1px solid #dbd6d6;
-  border-radius: 999px;
-  padding: 2px;
-  margin-right: 5px;
-}
-
 .body::-webkit-scrollbar {
   display: none;
 }

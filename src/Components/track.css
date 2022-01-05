@@ -1,0 +1,25 @@
+.track {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 #121212, 0 6px 20px 0 #121212;
+  transition: 300ms all ease-in;
+  border-radius: 5px;
+  padding: 10px 10px;
+  max-width: 300px;
+  min-width: 300px;
+  user-select: none;
+}
+.track > img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.track > p {
+  margin-left: 10px;
+}
+
+.track:hover {
+  background-color: #363333;
+}

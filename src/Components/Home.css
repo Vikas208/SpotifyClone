@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 70px;
+  overflow-x: hidden;
+  /* border: 2px solid beige; */
+  padding: 10px;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  max-height: 30rem;
+}
+.home::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.welcome {
+  font-size: x-large;
+  letter-spacing: 1.5px;
+}
+.recently_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

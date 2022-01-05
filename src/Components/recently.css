@@ -1,0 +1,13 @@
+.recent_Album {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+  overflow-y: auto;
+  /* border: 1px solid white; */
+  max-height: 30rem;
+}
+.recent_Album::-webkit-scrollbar {
+  display: none;
+}

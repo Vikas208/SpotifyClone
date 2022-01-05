@@ -6,11 +6,14 @@ import reportWebVitals from "./reportWebVitals";
 import { DataLayer } from "./DataLayer";
 import reducer from "./Reducer/reducer";
 import { initialState } from "./Reducer/reducer";
+import { BrowserRouter as Router } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
-    <DataLayer initialState={initialState} reducer={reducer}>
-      <App />
-    </DataLayer>
+    <Router>
+      <DataLayer initialState={initialState} reducer={reducer}>
+        <App />
+      </DataLayer>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

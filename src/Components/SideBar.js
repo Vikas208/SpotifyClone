@@ -7,6 +7,8 @@ import Library from "@material-ui/icons/LibraryMusic";
 import Create from "@material-ui/icons/CreateOutlined";
 import Favorite from "@material-ui/icons/Favorite";
 import { useDataLayerValue } from "../DataLayer";
+
+import { Link } from "react-router-dom";
 function SideBar() {
   const [{ playlist }, dispatch] = useDataLayerValue();
 
@@ -17,7 +19,9 @@ function SideBar() {
         src="https://music-b26f.kxcdn.com/wp-content/uploads/2017/06/635963274692858859903160895_spotify-logo-horizontal-black.jpg"
         alt="Spotify_logo"
       />
-      <SideBarOption title="Home" Icon={Home} active={true} />
+      <Link to="/home">
+        <SideBarOption title="Home" Icon={Home} active={true} />
+      </Link>
       <SideBarOption title="Search" Icon={Search} />
       <SideBarOption title="Library" Icon={Library} />
       <SideBarOption title="Create Playlist" Icon={Create} />
